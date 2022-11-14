@@ -122,7 +122,6 @@ nav {
   }
 
   .burger.active .line:first-child {
-    /* transform: translateY(-300px); */
     transform: rotate(-45deg) translateY(11px);
   }
 
