@@ -1,3 +1,4 @@
+// Burger Menu
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const li = document.querySelectorAll("li");
@@ -18,7 +19,7 @@ li.forEach((li) => {
 
 burger.addEventListener("click", toggle);
 
-// countdown
+// Countdown
 let launchDate = new Date("Oct 1, 2023 00:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
