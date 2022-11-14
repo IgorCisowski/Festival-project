@@ -49,3 +49,19 @@ function tick() {
     document.querySelector(".countdown").innerText = time;
   }
 }
+
+// sections scroll
+document.querySelectorAll("nav a").forEach((el) => {
+  el.addEventListener("click", function () {
+    const goToSection = "#" + this.classList[0];
+    if (goToSection === "#home") {
+      scroll({
+        top: document.querySelector(goToSection).scrollTop,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    document.querySelector(goToSection).scrollIntoView({ behavior: "smooth" });
+  });
+});
