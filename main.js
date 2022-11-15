@@ -65,3 +65,23 @@ document.querySelectorAll("nav a").forEach((el) => {
     document.querySelector(goToSection).scrollIntoView({ behavior: "smooth" });
   });
 });
+
+// scroll Top arrow
+const arrow = document.querySelector(".up");
+
+window.addEventListener("scroll", checkHeight);
+
+function checkHeight() {
+  if (window.scrollY > 250) {
+    arrow.classList.add("active");
+  } else {
+    arrow.classList.remove("active");
+  }
+}
+
+arrow.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

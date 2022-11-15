@@ -41,6 +41,39 @@ body {
 
 /*                   Media queries 425px              */
 /* @media screen and (max-width: 425px) { */
+.up {
+  z-index: 20;
+  position: fixed;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  bottom: 55px;
+  right: 5px;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 50%;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.up.active {
+  opacity: 1;
+}
+
+.up:hover {
+  background-color: #fff;
+  color: #d15bcc;
+  border: 2px solid #d15bcc;
+  box-shadow: 0 0 10px #d15bcc;
+  transform: translateY(-5px);
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -101,6 +134,7 @@ nav {
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
   background-color: var(--DarkBlue);
+  padding: 25px 0;
 }
 
 .menu a {
@@ -153,6 +187,8 @@ nav {
 }
 
 .wallpaper {
+  margin-top: 8vh;
+  background-color: var(--DarkBlue);
   position: relative;
   width: 100%;
   height: 100%;
@@ -216,10 +252,30 @@ nav {
   font-size: 40px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.heading p {
+  font-weight: bold;
+}
+
+.heading h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.heading h6 {
+  font-size: 12px;
+}
+
+.heading h6 i {
+  font-size: 10px;
+  margin-right: 5px;
+}
 /*             About             */
 .About {
+  scroll-margin: 65px;
   position: relative;
   color: #fff;
+  background-color: var(--DarkBlue);
 }
 
 .About img {
@@ -248,6 +304,7 @@ nav {
 
 .aboutContent p:nth-last-child(2) {
   font-size: 15px;
+  text-transform: lowercase;
 }
 
 .aboutContent p:last-child {
@@ -258,19 +315,29 @@ nav {
 }
 /*            Line-Up            */
 .Line-up {
+  scroll-margin: 60px;
   width: 100%;
   background-image: url(Main-img/Neon\ triangles.jpg);
   background-size: cover;
-  padding: 50px 15px 70px;
+  padding: 50px 15px 90px;
 }
 
 .lineUpHeader {
   padding: 0 0 20px 0;
 }
 
+.lineUpHeader h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.lineUpHeader p {
+  font-size: 15px;
+}
+
 .lineUpContent {
   display: flex;
-  padding: 15px;
+  padding: 10px 15px;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -285,7 +352,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 280px 170px;
+  padding: 250px 170px;
   margin: 10px;
   scroll-snap-align: center;
 }
@@ -356,14 +423,21 @@ nav {
 }
 /*            FaQ            */
 .Faq {
+  scroll-margin: 50px;
   padding: 30px 15px;
   background-color: var(--DarkBlue);
 }
 .faqHeader {
   padding: 0 0 20px 0;
 }
+
 .faqHeader h2 {
+  font-size: 20px;
   text-transform: uppercase;
+}
+
+.faqHeader p {
+  font-size: 15px;
 }
 /* .faqHeader p {
   } */
@@ -410,7 +484,7 @@ nav {
 }
 /* Contact */
 .Contact {
-  /* scroll-margin: 78px; */
+  scroll-margin: 64px;
   background-image: url(Main-img/Neon\ triangles.jpg);
   background-size: cover;
   padding: 30px 15px 50px;
@@ -419,13 +493,13 @@ nav {
 .contactHeader {
   margin-bottom: 15px;
 }
-/* .contact-header h2 {
+.contactHeader h2 {
+  font-size: 20px;
   text-transform: uppercase;
-  font-size: 28px;
 }
-.contact-header p {
+.contactHeader p {
   font-size: 15px;
-} */
+}
 
 .online-form {
   padding: 20px 25px;
