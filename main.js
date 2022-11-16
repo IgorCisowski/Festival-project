@@ -6,6 +6,14 @@ const li = document.querySelectorAll("li");
 const toggle = () => {
   menu.classList.toggle("menuActive");
   burger.classList.toggle("active");
+
+  const arrow = document.querySelector(".up");
+
+  if (menu.classList.contains("menuActive")) {
+    arrow.style.display = "none";
+  } else if (!menu.classList.contains("menuActive")) {
+    arrow.style.display = "block";
+  }
 };
 
 const close = () => {
@@ -51,10 +59,10 @@ function tick() {
 }
 
 // sections scroll
-document.querySelectorAll("nav a").forEach((el) => {
-  el.addEventListener("click", function () {
+document.querySelectorAll("a").forEach((el) => {
+  el.addEventListener("click", () => {
     const goToSection = "#" + this.classList[0];
-    if (goToSection === "#home") {
+    if (goToSection === "#Home") {
       scroll({
         top: document.querySelector(goToSection).scrollTop,
         behavior: "smooth",
@@ -69,15 +77,15 @@ document.querySelectorAll("nav a").forEach((el) => {
 // scroll Top arrow
 const arrow = document.querySelector(".up");
 
-window.addEventListener("scroll", checkHeight);
-
-function checkHeight() {
+const checkHeight = () => {
   if (window.scrollY > 250) {
     arrow.classList.add("active");
   } else {
     arrow.classList.remove("active");
   }
-}
+};
+
+window.addEventListener("scroll", checkHeight);
 
 arrow.addEventListener("click", () => {
   window.scrollTo({

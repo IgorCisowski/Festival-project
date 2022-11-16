@@ -15,7 +15,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- FavIcon -->
-    <link href="Logo-Favicon-img/FavIcon.ico" rel="icon" type="image/x-icon" />
+    <link href="Logo-Favicon-img/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>Level-UP</title>
@@ -28,7 +30,7 @@
       <!-- Logo -->
       <div class="logoSection">
         <img src="Logo-Favicon-img/Logo.png" alt="Logo" />
-        <a href="Home">Level-UP</a>
+        <a href="#Home">Level-UP</a>
       </div>
       <!-- Burger Menu -->
       <div class="burger">
@@ -181,7 +183,7 @@
           <p class="ans">
             It is forbidden to bring alcohol to the festival from outside
             although you are allowed to bring your own food and soft drinks like
-            water or soda cans
+            water or soda 
           </p>
           <p class="ask">Where can I buy tickets for the festival?</p>
           <p class="ans">
@@ -210,7 +212,7 @@
     </section>
     <!-- Contact -->
     <section id="Contact" class="Contact">
-        <div class="contactHeader">
+        <div class="contactHeader" data-aos="fade-right">
           <h2>contact</h2>
           <p class="ask">Have some questions regarding the event?</p>
           <p class="ask">
@@ -302,5 +304,21 @@
     </footer>
     <!-- Java Script -->
     <script src="main.js"></script>
+    <!-- Vanilla JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        once: true,
+      });
+    </script>
+    <!-- VanillaJS -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".dj-picture"), {
+        max: 15,
+        speed: 1000,
+      });
+    </script>
   </body>
 </html>

@@ -13,6 +13,16 @@ html {
   overflow-x: hidden;
   color: white;
 }
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000029;
+  border-radius: 10px;
+  border: 1px solid white;
+}
 /*                          Body                        */
 body {
   position: relative;
@@ -24,10 +34,6 @@ body {
 /*                         NAV                         */
 
 /*                     LogoSection                     */
-.logoSection img {
-  height: auto;
-  width: 35%;
-}
 /*                        Menu                        */
 /* .menu {
 } */
@@ -40,7 +46,6 @@ body {
 } */
 
 /*                   Media queries 425px              */
-/* @media screen and (max-width: 425px) { */
 .up {
   z-index: 20;
   position: fixed;
@@ -84,28 +89,29 @@ nav {
   background-size: cover;
   align-items: center;
   height: 8vh;
+  box-shadow: 0 0 10px black;
 }
 
 .logoSection {
   position: relative;
+  width: 20%;
   margin-left: 10px;
-  width: 50%;
 }
 
 .logoSection img {
   height: auto;
-  width: 35%;
+  width: 90%;
 }
 
 .logoSection a {
   position: absolute;
-  top: 20px;
-  left: 5px;
-  font-size: 15px;
+  top: 3vh;
+  left: 1vh;
+  width: 100%;
   color: white;
-  text-transform: uppercase;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .burger {
@@ -134,11 +140,7 @@ nav {
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
   background-color: var(--DarkBlue);
-  padding: 25px 0;
-}
-
-.menu a {
-  font-size: 15px;
+  padding: 60px 0;
 }
 
 .menu ul {
@@ -148,9 +150,6 @@ nav {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .menu li {
@@ -158,8 +157,32 @@ nav {
 }
 
 .menu a {
+  position: relative;
   text-decoration: none;
+  font-size: 15px;
+  color: rgb(150, 150, 150);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.menu a:after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s ease;
+}
+
+.menu a:hover {
   color: white;
+}
+.menu a:hover:after {
+  width: 100%;
 }
 
 .menuActive {
@@ -251,10 +274,14 @@ nav {
   text-transform: uppercase;
   font-size: 40px;
   background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
-.heading p {
-  font-weight: bold;
+.heading h1,
+h3,
+h6,
+p {
+  text-shadow: 0 0 6px black;
 }
 
 .heading h3 {
@@ -293,22 +320,22 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00002980;
 }
 
 .aboutContent h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 35px;
 }
 
 .aboutContent p:nth-last-child(2) {
   font-size: 15px;
-  text-transform: lowercase;
+  font-weight: 400;
 }
 
 .aboutContent p:last-child {
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 15px;
   font-weight: bold;
   text-transform: uppercase;
@@ -319,6 +346,7 @@ nav {
   width: 100%;
   background-image: url(Main-img/Neon\ triangles.jpg);
   background-size: cover;
+  background-position: center;
   padding: 50px 15px 90px;
 }
 
@@ -327,7 +355,7 @@ nav {
 }
 
 .lineUpHeader h2 {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -432,7 +460,7 @@ nav {
 }
 
 .faqHeader h2 {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 
@@ -494,7 +522,7 @@ nav {
   margin-bottom: 15px;
 }
 .contactHeader h2 {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .contactHeader p {
@@ -697,6 +725,7 @@ textarea {
 .calendar,
 .mobile-no {
   text-align: center;
+  font-size: 14px;
   width: 30%;
   padding: 15px 0;
 }
@@ -716,4 +745,337 @@ textarea {
   width: 80%;
   color: #a39ea3;
   font-weight: bold;
+}
+
+@media screen and (min-width: 425px) {
+  /* .logoSection img {
+    width: 20%;
+    height: auto;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+  /* .logoSection img {
+    width: 20%;
+    height: auto;
+  }
+
+  .logoSection a {
+    top: 25px;
+  } */
+
+  .heading h1 {
+    font-size: 3em;
+  }
+  .heading p {
+    font-size: 1.5em;
+  }
+  .heading h3 {
+    font-size: 1em;
+  }
+  .heading h6 i {
+    font-size: 0.8em;
+  }
+  .heading h6 {
+    font-size: 0.5em;
+  }
+
+  .aboutContent h2 {
+    font-size: 5em;
+  }
+  .aboutContent p:nth-last-child(2) {
+    font-size: 2.5em;
+  }
+  .aboutContent p:nth-last-child(1) {
+    font-size: 2.2em;
+  }
+  .lineUpHeader h2 {
+    font-size: 28px;
+  }
+  .lineUpHeader p {
+    font-size: 20px;
+  }
+  .lineUpHeader h6 {
+    font-size: 12px;
+  }
+
+  .Line-up {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Faq {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .faqHeader {
+    width: 100%;
+  }
+  .faqHeader h2 {
+    font-size: 28px;
+  }
+  .faqHeader p {
+    font-size: 20px;
+  }
+
+  .covidFaq {
+    width: 48%;
+  }
+
+  .eventFaq {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+
+  .Contact {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contactHeader h2 {
+    font-size: 28px;
+  }
+
+  .contactHeader p {
+    font-size: 20px;
+  }
+
+  .footerHeader h3 {
+    font-size: 28px;
+  }
+
+  .social {
+    margin: 0 50px;
+  }
+  .footerContent {
+    margin: 0 60px;
+  }
+
+  .menu a {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* .logoSection img {
+    width: 15%;
+    height: auto;
+  } */
+
+  .logoSection a {
+    top: 25px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    transform: translateX(0);
+    position: static;
+    height: 0;
+    background-color: transparent;
+    width: 50%;
+  }
+
+  .menu ul {
+    flex-direction: row;
+  }
+
+  .menu a {
+    font-size: 15px;
+  }
+
+  .About {
+    display: flex;
+  }
+
+  .About img {
+    position: relative;
+    width: 50%;
+    height: auto;
+  }
+
+  .About:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .aboutContent {
+    z-index: 1;
+    position: static;
+    width: 50%;
+    padding: 80px 20px 110px 30px;
+    background-color: var(--DarkBlue);
+  }
+
+  .aboutContent h2 {
+    font-size: 35px;
+  }
+
+  .aboutContent p:nth-last-child(2) {
+    font-size: 20px;
+  }
+  .aboutContent p:nth-last-child(1) {
+    font-size: 18px;
+  }
+  .lineUpContent {
+    scroll-snap-type: none;
+    overflow-x: unset;
+  }
+  .lineUpHeader h5 {
+    display: none;
+  }
+  .djPhoto {
+    padding: 250px 110px;
+  }
+
+  .Faq {
+    padding: 70px;
+  }
+
+  .Contact {
+    padding: 80px;
+  }
+
+  .Footer {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .social {
+    margin: 0 150px;
+  }
+
+  .location,
+  .calendar,
+  .mobile-no {
+    font-size: 15px;
+  }
+
+  .location i,
+  .calendar i,
+  .mobile-no i {
+    font-size: 15px;
+  }
+
+  .up {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    height: 10vh;
+  }
+
+  .wallpaper img {
+    height: auto;
+  }
+
+  /* .logoSection img {
+    width: 10%;
+    height: auto;
+  }
+
+  .logoSection a {
+    top: 50%;
+    left: 50%;
+    text-shadow: 0 0 5px black;
+  } */
+
+  .Home {
+    height: 100vh;
+  }
+
+  .heading h1 {
+    font-size: 3.7em;
+  }
+  .heading p {
+    font-size: 2em;
+  }
+  .heading h3 {
+    font-size: 1.5em;
+  }
+  .heading h6 i {
+    font-size: 0.8em;
+  }
+  .heading h6 {
+    font-size: 0.5em;
+  }
+
+  .menu {
+    width: 40%;
+    padding-right: 15px;
+  }
+
+  .aboutContent {
+    padding: 175px 30px;
+  }
+
+  .aboutContent h2 {
+    font-size: 50px;
+  }
+
+  .aboutContent p:nth-last-child(2) {
+    font-size: 20px;
+  }
+  .aboutContent p:nth-last-child(1) {
+    font-size: 22px;
+  }
+
+  .Line-up {
+    scroll-margin: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .djPhoto {
+    width: 100%;
+  }
+
+  .Faq {
+    padding: 75px 70px;
+  }
+
+  .Contact {
+    padding: 80px;
+    width: 100%;
+  }
+
+  .contactHeader {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .online-form {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .Footer {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .social {
+    margin: 0 150px;
+  }
+
+  .location,
+  .calendar,
+  .mobile-no {
+    font-size: 15px;
+  }
+
+  .location i,
+  .calendar i,
+  .mobile-no i {
+    font-size: 15px;
+  }
 }
