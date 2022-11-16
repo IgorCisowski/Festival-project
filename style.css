@@ -11,6 +11,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   color: white;
 }
 ::-webkit-scrollbar {
@@ -23,7 +24,7 @@ html {
   border-radius: 10px;
   border: 1px solid white;
 }
-/*                          Body                        */
+
 body {
   position: relative;
   font-family: "Roboto Condensed", sans-serif;
@@ -31,21 +32,7 @@ body {
   background-color: var(--DarkBlue);
   margin-bottom: 32vh;
 }
-/*                         NAV                         */
 
-/*                     LogoSection                     */
-/*                        Menu                        */
-/* .menu {
-} */
-
-/*                        Main                        */
-/* .Home {
-  border: 2px solid red;
-  height: 90vh;
-  overflow: hidden;
-} */
-
-/*                   Media queries 425px              */
 .up {
   z-index: 20;
   position: fixed;
@@ -100,7 +87,7 @@ nav {
 
 .logoSection img {
   height: auto;
-  width: 90%;
+  width: 85%;
 }
 
 .logoSection a {
@@ -140,13 +127,12 @@ nav {
   transform: translateX(100%);
   transition: 0.3s ease-in-out;
   background-color: var(--DarkBlue);
-  padding: 60px 0;
 }
 
 .menu ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -159,7 +145,7 @@ nav {
 .menu a {
   position: relative;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   color: rgb(150, 150, 150);
   font-weight: bold;
   text-transform: uppercase;
@@ -275,13 +261,8 @@ nav {
   font-size: 40px;
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 20px;
-}
-
-.heading h1,
-h3,
-h6,
-p {
-  text-shadow: 0 0 6px black;
+  text-shadow: 0 0 2px white;
+  text-transform: uppercase;
 }
 
 .heading h3 {
@@ -320,7 +301,7 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
-  background-color: #00002980;
+  background-color: (--DarkBlue);
 }
 
 .aboutContent h2 {
@@ -387,29 +368,45 @@ p {
 
 .djPhoto:nth-child(1) {
   background-image: url(DJs-img/Dj-1.jpeg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
   border-radius: 10px;
+  transition: 0.4s;
 }
+
 .djPhoto:nth-child(2) {
   background-image: url(DJs-img/Dj-2.jpeg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
   border-radius: 10px;
+  transition: 0.4s;
 }
 .djPhoto:nth-child(3) {
   background-image: url(DJs-img/Dj-3.jpeg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
   border-radius: 10px;
+  transition: 0.4s;
 }
 .djPhoto:nth-child(4) {
   background-image: url(DJs-img/Dj-4.jpeg);
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
   border-radius: 10px;
+  transition: 0.4s;
 }
-
+.djPhoto:nth-child(1):hover {
+  background-size: auto 120%;
+}
+.djPhoto:nth-child(2):hover {
+  background-size: auto 120%;
+}
+.djPhoto:nth-child(3):hover {
+  background-size: auto 120%;
+}
+.djPhoto:nth-child(4):hover {
+  background-size: auto 120%;
+}
 .djContent {
   position: absolute;
   top: 0;
@@ -557,6 +554,7 @@ textarea {
   border-bottom: 2px solid #36c4f6;
   font-size: 15px;
   resize: none;
+  border-radius: 0;
 }
 
 .online-form input:nth-last-child(1) {
@@ -582,7 +580,7 @@ textarea {
   outline: none;
   position: relative;
   cursor: pointer;
-  /* border-radius: 5px; */
+  border-radius: 5px;
 }
 
 .btn.btn-background-slide::before {
@@ -670,6 +668,7 @@ textarea {
   font-size: 20px;
 }
 .social {
+  margin: 0 25px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -745,337 +744,410 @@ textarea {
   width: 80%;
   color: #a39ea3;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 425px) {
-  /* .logoSection img {
-    width: 20%;
-    height: auto;
-  } */
-}
-
-@media screen and (min-width: 768px) {
-  /* .logoSection img {
-    width: 20%;
-    height: auto;
-  }
-
-  .logoSection a {
-    top: 25px;
-  } */
-
-  .heading h1 {
-    font-size: 3em;
-  }
-  .heading p {
-    font-size: 1.5em;
-  }
-  .heading h3 {
-    font-size: 1em;
-  }
-  .heading h6 i {
-    font-size: 0.8em;
-  }
-  .heading h6 {
-    font-size: 0.5em;
-  }
-
-  .aboutContent h2 {
-    font-size: 5em;
-  }
-  .aboutContent p:nth-last-child(2) {
-    font-size: 2.5em;
-  }
-  .aboutContent p:nth-last-child(1) {
-    font-size: 2.2em;
-  }
-  .lineUpHeader h2 {
-    font-size: 28px;
-  }
-  .lineUpHeader p {
-    font-size: 20px;
-  }
-  .lineUpHeader h6 {
-    font-size: 12px;
-  }
-
-  .Line-up {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .Faq {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .faqHeader {
-    width: 100%;
-  }
-  .faqHeader h2 {
-    font-size: 28px;
-  }
-  .faqHeader p {
-    font-size: 20px;
-  }
-
-  .covidFaq {
-    width: 48%;
-  }
-
-  .eventFaq {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-
-  .Contact {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .contactHeader h2 {
-    font-size: 28px;
-  }
-
-  .contactHeader p {
-    font-size: 20px;
-  }
-
-  .footerHeader h3 {
-    font-size: 28px;
-  }
-
-  .social {
-    margin: 0 50px;
-  }
-  .footerContent {
-    margin: 0 60px;
-  }
-
-  .menu a {
-    font-size: 25px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  /* .logoSection img {
-    width: 15%;
-    height: auto;
-  } */
-
-  .logoSection a {
-    top: 25px;
-  }
-
-  .burger {
-    display: none;
-  }
-
-  .menu {
-    transform: translateX(0);
-    position: static;
-    height: 0;
-    background-color: transparent;
-    width: 50%;
-  }
-
-  .menu ul {
-    flex-direction: row;
-  }
-
-  .menu a {
-    font-size: 15px;
-  }
-
-  .About {
-    display: flex;
-  }
-
-  .About img {
-    position: relative;
-    width: 50%;
-    height: auto;
-  }
-
-  .About:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  .aboutContent {
-    z-index: 1;
-    position: static;
-    width: 50%;
-    padding: 80px 20px 110px 30px;
-    background-color: var(--DarkBlue);
-  }
-
-  .aboutContent h2 {
-    font-size: 35px;
-  }
-
-  .aboutContent p:nth-last-child(2) {
-    font-size: 20px;
-  }
-  .aboutContent p:nth-last-child(1) {
-    font-size: 18px;
-  }
-  .lineUpContent {
-    scroll-snap-type: none;
-    overflow-x: unset;
-  }
-  .lineUpHeader h5 {
-    display: none;
-  }
-  .djPhoto {
-    padding: 250px 110px;
-  }
-
-  .Faq {
-    padding: 70px;
-  }
-
-  .Contact {
-    padding: 80px;
-  }
-
-  .Footer {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
-
-  .social {
-    margin: 0 150px;
-  }
-
-  .location,
-  .calendar,
-  .mobile-no {
-    font-size: 15px;
-  }
-
-  .location i,
-  .calendar i,
-  .mobile-no i {
-    font-size: 15px;
-  }
-
-  .up {
-    margin-right: 20px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  nav {
-    height: 10vh;
-  }
-
-  .wallpaper img {
-    height: auto;
-  }
-
-  /* .logoSection img {
-    width: 10%;
-    height: auto;
-  }
-
-  .logoSection a {
-    top: 50%;
-    left: 50%;
-    text-shadow: 0 0 5px black;
-  } */
-
-  .Home {
-    height: 100vh;
-  }
-
-  .heading h1 {
-    font-size: 3.7em;
-  }
-  .heading p {
-    font-size: 2em;
-  }
-  .heading h3 {
-    font-size: 1.5em;
-  }
-  .heading h6 i {
-    font-size: 0.8em;
-  }
-  .heading h6 {
-    font-size: 0.5em;
-  }
-
-  .menu {
-    width: 40%;
-    padding-right: 15px;
-  }
-
-  .aboutContent {
-    padding: 175px 30px;
-  }
-
-  .aboutContent h2 {
-    font-size: 50px;
-  }
-
-  .aboutContent p:nth-last-child(2) {
-    font-size: 20px;
-  }
-  .aboutContent p:nth-last-child(1) {
-    font-size: 22px;
-  }
-
-  .Line-up {
-    scroll-margin: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
+  .logoSection img {
+    width: 65%;
   }
 
   .djPhoto {
-    width: 100%;
+    padding: 230px 170px;
   }
 
-  .Faq {
-    padding: 75px 70px;
+  body {
+    margin-bottom: 40vh;
   }
 
-  .Contact {
-    padding: 80px;
-    width: 100%;
+  .social a {
+    width: 6vh;
+    height: 6vh;
   }
 
-  .contactHeader {
-    width: 100%;
-    margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    .logoSection img {
+      width: 40%;
+      height: auto;
+    }
+
+    .heading h1 {
+      font-size: 3em;
+    }
+    .heading p {
+      font-size: 1.5em;
+    }
+    .heading h3 {
+      font-size: 1em;
+    }
+    .heading h6 i {
+      font-size: 0.8em;
+    }
+    .heading h6 {
+      font-size: 0.5em;
+    }
+
+    .aboutContent h2 {
+      font-size: 4.5em;
+    }
+    .aboutContent p:nth-last-child(2) {
+      font-size: 2.5em;
+    }
+    .aboutContent p:nth-last-child(1) {
+      font-size: 3em;
+    }
+    .lineUpHeader h2 {
+      font-size: 28px;
+    }
+    .lineUpHeader p {
+      font-size: 20px;
+    }
+    .lineUpHeader h6 {
+      font-size: 12px;
+    }
+
+    .Line-up {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .Faq {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .faqHeader {
+      width: 100%;
+    }
+    .faqHeader h2 {
+      font-size: 28px;
+    }
+    .faqHeader p {
+      font-size: 15px;
+    }
+
+    .lineUpContent {
+      scroll-snap-type: none;
+      overflow-x: unset;
+    }
+    .lineUpHeader h5 {
+      display: none;
+    }
+    .djPhoto {
+      padding: 180px 70px;
+      width: 100%;
+    }
+
+    .covidFaq {
+      width: 49%;
+    }
+
+    .eventFaq {
+      width: 49%;
+      margin-bottom: 40px;
+    }
+
+    .Contact {
+      scroll-margin: 57px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .contactHeader h2 {
+      font-size: 28px;
+    }
+
+    .contactHeader p {
+      font-size: 15px;
+    }
+
+    .footerHeader h3 {
+      font-size: 28px;
+    }
+
+    .social {
+      margin: 0 180px;
+    }
+    .footerContent {
+      margin: 0 60px;
+    }
+
+    .menu a {
+      font-size: 18px;
+    }
+
+    .About {
+      display: flex;
+    }
+
+    .About img {
+      position: relative;
+      width: 50%;
+      height: auto;
+    }
+
+    .About:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .aboutContent {
+      z-index: 1;
+      position: static;
+      width: 50%;
+      padding: 40px 20px;
+      background-color: var(--DarkBlue);
+    }
+
+    .aboutContent h2 {
+      font-size: 30px;
+    }
+
+    .aboutContent p:nth-last-child(2) {
+      font-size: 18px;
+    }
+    .aboutContent p:nth-last-child(1) {
+      font-size: 20px;
+    }
+
+    .when {
+      font-size: 14px;
+    }
+
+    .who {
+      font-size: 18px;
+    }
+
+    .what {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
   }
 
-  .online-form {
-    margin: 0 auto;
-    width: 50%;
-  }
-  .Footer {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
+  @media screen and (min-width: 1024px) {
+    .logoSection img {
+      width: 30%;
+    }
 
-  .social {
-    margin: 0 150px;
-  }
+    .burger {
+      display: none;
+    }
 
-  .location,
-  .calendar,
-  .mobile-no {
-    font-size: 15px;
-  }
+    .menu {
+      transform: translateX(0);
+      position: static;
+      height: 0;
+      background-color: transparent;
+      width: 50%;
+    }
 
-  .location i,
-  .calendar i,
-  .mobile-no i {
-    font-size: 15px;
+    .menu ul {
+      flex-direction: row;
+    }
+
+    .menu a {
+      font-size: 15px;
+    }
+
+    .aboutContent {
+      padding: 120px 20px;
+    }
+    .About {
+      scroll-margin: 20px;
+    }
+
+    .Line-up {
+      scroll-margin: 20px;
+    }
+
+    .djPhoto {
+      padding: 210px 80px;
+      width: 100%;
+    }
+
+    .when {
+      font-size: 18px;
+      padding-left: 10px;
+    }
+
+    .who {
+      font-size: 22px;
+    }
+
+    .what {
+      font-size: 18px;
+      padding: 0 7px 15px;
+    }
+
+    .Faq {
+      padding: 70px;
+    }
+
+    .Contact {
+      padding: 100px;
+    }
+
+    .Footer {
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+
+    .social {
+      margin: 5px 200px;
+    }
+
+    .location,
+    .calendar,
+    .mobile-no {
+      font-size: 15px;
+    }
+
+    .location i,
+    .calendar i,
+    .mobile-no i {
+      font-size: 15px;
+    }
+
+    .up {
+      margin-right: 20px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    nav {
+      height: 10vh;
+    }
+
+    .wallpaper img {
+      height: auto;
+    }
+
+    .logoSection {
+      margin-left: 20px;
+    }
+
+    .logoSection img {
+      width: 20%;
+      height: auto;
+    }
+
+    .Home {
+      height: 100vh;
+    }
+
+    .heading h1 {
+      font-size: 3.7em;
+    }
+    .heading p {
+      font-size: 2em;
+    }
+    .heading h3 {
+      font-size: 1.5em;
+    }
+    .heading h6 i {
+      font-size: 0.8em;
+    }
+    .heading h6 {
+      font-size: 0.5em;
+    }
+
+    .menu {
+      width: 40%;
+      padding-right: 15px;
+    }
+
+    .aboutContent {
+      padding: 175px 30px;
+    }
+
+    .aboutContent h2 {
+      font-size: 50px;
+    }
+
+    .aboutContent p:nth-last-child(2) {
+      font-size: 20px;
+    }
+    .aboutContent p:nth-last-child(1) {
+      font-size: 22px;
+    }
+
+    .Line-up {
+      scroll-margin: 40px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    .lineUpHeader h2 {
+      font-size: 28px;
+    }
+
+    .lineUpHeader p {
+      font-size: 15px;
+    }
+    .when {
+      font-size: 22px;
+      padding-left: 15px;
+    }
+
+    .who {
+      font-size: 30px;
+    }
+
+    .what {
+      font-size: 22px;
+      padding: 0 10px 25px;
+    }
+
+    .djPhoto {
+      width: 100%;
+      padding: 250px 0;
+    }
+
+    .Faq {
+      padding: 75px 70px;
+    }
+
+    .Contact {
+      padding: 80px;
+      width: 100%;
+    }
+
+    .contactHeader {
+      width: 50%;
+      padding: 0 0 5px;
+      margin: 0 auto;
+    }
+
+    .online-form {
+      margin: 0 auto;
+      width: 50%;
+    }
+
+    .social {
+      margin: 20px 60vh;
+    }
+    .footerContent {
+      margin-left: 30vh;
+      margin-right: 30vh;
+    }
+    .location,
+    .calendar,
+    .mobile-no {
+      font-size: 15px;
+    }
+
+    .location i,
+    .calendar i,
+    .mobile-no i {
+      font-size: 15px;
+    }
+    body {
+      margin-bottom: 45vh;
+    }
   }
 }
