@@ -6,6 +6,7 @@ const li = document.querySelectorAll("li");
 const toggle = () => {
   menu.classList.toggle("menuActive");
   burger.classList.toggle("active");
+  document.body.style.overflowY = "hidden";
 
   const arrow = document.querySelector(".up");
 
@@ -19,6 +20,7 @@ const toggle = () => {
 const close = () => {
   menu.classList.remove("menuActive");
   burger.classList.remove("active");
+  document.body.style.overflowY = "visible";
 };
 
 li.forEach((li) => {
